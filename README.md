@@ -2,6 +2,6 @@
 Python PDF password Brute Force
 
 Run main.py in the same directory as your .pdf to be opened. 
-This is for education only, and may not work on all .pdf files. 
+This is for education only, and will not work on all .pdf files as PyPDF4 does not support all pdf encryption types. 
 
-Written in python 3.5.1
+Fixed for Python 3.8
