@@ -6,7 +6,7 @@ http://pyparsing.wikispaces.com
 
 
 import atexit
-from time import clock
+from time import perf_counter as clock
 from functools import reduce
 import math
 
