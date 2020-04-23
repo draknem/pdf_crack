@@ -1,5 +1,5 @@
 import threading
-import PyPDF2
+import PyPDF4 as PyPDF2
 
 class ThreadPwd(threading.Thread):
 
