@@ -17,6 +17,7 @@ To Add:
 import sys
 import itertools
 import thread_pwd
+import multiprocessing
 from threading import _start_new_thread
 from threading_manager import ThreadManager, MasterThread, ThreadInfo
 from timing import *
@@ -50,7 +51,7 @@ while True:
         print("Invalid Input. Try again.\n")
 
 
-threads = 4
+threads = multiprocessing.cpu_count() - 1
 min_spaces = 0
 max_spaces = 0
 thread_count = 0
@@ -182,7 +183,7 @@ for i in range(min_spaces, max_spaces):
             while not master.manager.add_thread(thread_toCheck): #if no thread was created, try again until it is
                 pass
 
-        if not master.isAlive():
+        if not master.is_alive():
             if master.manager.exc_info:
                 if str(master.manager.exc_info[0]) == '<class \'thread_pwd.FoundPwd\'>':
                     found = True
